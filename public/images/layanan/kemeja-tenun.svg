@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ece2d0"/>
+      <stop offset="1" stop-color="#dccdb8"/>
+    </linearGradient>
+    <pattern id="tenun" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0 15h30M15 0v30" stroke="#e8ddc8" stroke-width="2" opacity=".28"/>
+      <rect x="0" y="0" width="30" height="30" fill="none" stroke="#e8ddc8" stroke-width="1" opacity=".18"/>
+    </pattern>
+    <path id="kemeja" d="M330 160q70-14 140 0l72 26 42 150-50 14-42-98v250q-90 28-180 0V252l-42 98-50-14 42-150Z"/>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M176 600V304a224 224 0 0 1 448 0v296Z" fill="#d2bfa4" opacity=".55"/>
+  <path d="M200 600V308a200 200 0 0 1 400 0v292" fill="none" stroke="#b9a180" stroke-width="2" stroke-dasharray="4 10" opacity=".7"/>
+  <ellipse cx="400" cy="552" rx="172" ry="15" fill="#b59c79" opacity=".3"/>
+
+  <g fill="none" stroke="#9a7138" stroke-width="4" stroke-linecap="round">
+    <path d="M400 132v-10a18 18 0 1 1 18-18"/>
+    <path d="M312 156h176"/>
+  </g>
+
+  <use href="#kemeja" fill="#4f6170"/>
+  <use href="#kemeja" fill="url(#tenun)"/>
+  <path d="M330 160q70-14 140 0l-10 34q-60 18-120 0Z" fill="#465865"/>
+  <path d="M366 158 400 224l34-66 16 6-44 82h-12l-44-82Z" fill="#e8ddc8"/>
+  <path d="M400 228v252" stroke="#d9cdb8" stroke-width="3"/>
+  <circle cx="400" cy="268" r="4" fill="#d9cdb8"/>
+  <circle cx="400" cy="318" r="4" fill="#d9cdb8"/>
+  <circle cx="400" cy="368" r="4" fill="#d9cdb8"/>
+  <circle cx="400" cy="418" r="4" fill="#d9cdb8"/>
+  <rect x="440" y="262" width="44" height="50" rx="3" fill="#445563" stroke="#d9cdb8" stroke-width="2" stroke-dasharray="4 5"/>
+  <path d="M250 336l46-12M504 324l46 12" stroke="#d9a861" stroke-width="3" opacity=".8"/>
+  <path d="M310 502q90 26 180 0" fill="none" stroke="#d9a861" stroke-width="3" stroke-dasharray="6 7"/>
+  <path d="M478 198q24 12 32 34" fill="none" stroke="#28343d" stroke-width="2" opacity=".3"/>
+</svg>

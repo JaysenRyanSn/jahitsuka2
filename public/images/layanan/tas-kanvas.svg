@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ede8d8"/>
+      <stop offset="1" stop-color="#dbd4bf"/>
+    </linearGradient>
+    <g id="bunga" fill="#55795c">
+      <circle cx="0" cy="-8" r="4.5"/>
+      <circle cx="7.6" cy="-2.5" r="4.5"/>
+      <circle cx="4.7" cy="6.5" r="4.5"/>
+      <circle cx="-4.7" cy="6.5" r="4.5"/>
+      <circle cx="-7.6" cy="-2.5" r="4.5"/>
+      <circle cx="0" cy="0" r="2.6" fill="#d9a861"/>
+    </g>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M150 600V320a250 250 0 0 1 500 0v280Z" fill="#cbc3ab" opacity=".5"/>
+  <path d="M176 600V324a224 224 0 0 1 448 0v276" fill="none" stroke="#b3aa90" stroke-width="2" stroke-dasharray="4 10" opacity=".75"/>
+  <ellipse cx="400" cy="552" rx="200" ry="16" fill="#aaa189" opacity=".3"/>
+
+  <path d="M300 214q100-34 200 0" fill="none" stroke="#9a7138" stroke-width="7" stroke-linecap="round"/>
+  <path d="M304 214q-10 70 44 96M496 214q10 70-44 96" fill="none" stroke="#9a7138" stroke-width="7" stroke-linecap="round"/>
+
+  <path d="M292 268h216l38 260q-146 34-292 0Z" fill="#f1e7d2"/>
+  <path d="M292 268h216l38 260q-146 34-292 0Z" fill="none" stroke="#b78d5c" stroke-width="3" stroke-dasharray="8 8"/>
+  <path d="M300 268h200v26H300Z" fill="#d9a861" opacity=".8"/>
+  <path d="M318 294q82 16 164 0" fill="none" stroke="#b78d5c" stroke-width="2"/>
+
+  <use href="#bunga" x="400" y="356"/>
+  <use href="#bunga" x="358" y="392"/>
+  <use href="#bunga" x="442" y="392"/>
+  <use href="#bunga" x="380" y="436"/>
+  <use href="#bunga" x="424" y="436"/>
+  <g fill="#55795c">
+    <path d="M352 418q-26 8-34 32 28 2 38-24Z"/>
+    <path d="M448 418q26 8 34 32-28 2-38-24Z"/>
+  </g>
+
+  <g fill="none" stroke="#c58b45" stroke-width="3">
+    <circle cx="400" cy="508" r="4"/>
+    <path d="M400 512v18"/>
+  </g>
+  <rect x="472" y="292" width="28" height="46" rx="4" fill="#d9a861" transform="rotate(8 472 292)"/>
+</svg>

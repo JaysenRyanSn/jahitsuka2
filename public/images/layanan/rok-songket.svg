@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efe0cd"/>
+      <stop offset="1" stop-color="#dfc7ad"/>
+    </linearGradient>
+    <linearGradient id="kain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c4a52"/>
+      <stop offset="1" stop-color="#5e333c"/>
+    </linearGradient>
+    <pattern id="songket" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M32 6 54 32 32 58 10 32Z" fill="none" stroke="#d9a861" stroke-width="2.5" opacity=".85"/>
+      <path d="M32 18 44 32 32 46 20 32Z" fill="none" stroke="#e8c99a" stroke-width="1.5" opacity=".75"/>
+      <circle cx="32" cy="32" r="3" fill="#e8c99a" opacity=".9"/>
+      <path d="M0 0h8M56 0h8M0 56h8M56 56h8" stroke="#d9a861" stroke-width="2" opacity=".5"/>
+    </pattern>
+    <path id="rok" d="M338 158q62-12 124 0l14 44 52 320q-128 30-256 0l52-320Z"/>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M178 600V302a222 222 0 0 1 444 0v298Z" fill="#d2b799" opacity=".55"/>
+  <path d="M202 600V306a198 198 0 0 1 396 0v294" fill="none" stroke="#b99a78" stroke-width="2" stroke-dasharray="4 10" opacity=".75"/>
+  <ellipse cx="400" cy="550" rx="185" ry="16" fill="#b18f6d" opacity=".3"/>
+
+  <g fill="none" stroke="#9a7138" stroke-width="4" stroke-linecap="round">
+    <path d="M400 128v-8a18 18 0 1 1 18-18"/>
+    <path d="M312 152h176"/>
+  </g>
+
+  <use href="#rok" fill="url(#kain)"/>
+  <use href="#rok" fill="url(#songket)"/>
+  <path d="M338 158q62-12 124 0l6 30q-68 14-136 0Z" fill="#d9a861"/>
+  <path d="M400 188v344" stroke="#e8c99a" stroke-width="2" opacity=".45"/>
+  <path d="M340 470q60 14 120 0" fill="none" stroke="#e8c99a" stroke-width="3" stroke-dasharray="6 7"/>
+  <path d="M330 514q70 18 140 0" fill="none" stroke="#d9a861" stroke-width="3" stroke-dasharray="6 7"/>
+  <path d="M286 300q-18 40-12 86" fill="none" stroke="#43232a" stroke-width="3" opacity=".4"/>
+  <g fill="#d9a861">
+    <circle cx="356" cy="176" r="3"/>
+    <circle cx="444" cy="176" r="3"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eae8d8"/>
+      <stop offset="1" stop-color="#d8d8c2"/>
+    </linearGradient>
+    <pattern id="lurik" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#7c8a6c"/>
+      <rect x="6" width="6" height="24" fill="#ece4d0" opacity=".85"/>
+      <rect x="17" width="2" height="24" fill="#5d6a50" opacity=".7"/>
+    </pattern>
+    <path id="gaun" d="M342 160q58-14 116 0l40 18 22 72-28 10-14-32 26 292q-104 26-208 0l26-292-14 32-28-10 22-72Z"/>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M186 600V302a214 214 0 0 1 428 0v298Z" fill="#c9c9b0" opacity=".5"/>
+  <path d="M210 600V306a190 190 0 0 1 380 0v294" fill="none" stroke="#b0b098" stroke-width="2" stroke-dasharray="4 10" opacity=".8"/>
+  <ellipse cx="400" cy="552" rx="170" ry="15" fill="#a8a88f" opacity=".32"/>
+
+  <g fill="none" stroke="#9a7138" stroke-width="4" stroke-linecap="round">
+    <path d="M400 132v-10a18 18 0 1 1 18-18"/>
+    <path d="M318 156h164"/>
+  </g>
+
+  <use href="#gaun" fill="url(#lurik)"/>
+  <path d="M342 160q58-14 116 0l-10 42q-48 18-96 0Z" fill="#7c8a6c"/>
+  <path d="M380 158q20 30 40 0-20 8-40 0Z" fill="#f3ecda"/>
+  <path d="M318 400q82 18 164 0" fill="none" stroke="#d9a861" stroke-width="10" opacity=".9"/>
+  <path d="M360 400q-4 30-14 46M440 400q4 30 14 46" fill="none" stroke="#b98b45" stroke-width="6" stroke-linecap="round"/>
+  <path d="M318 512q82 24 164 0" fill="none" stroke="#f3ecda" stroke-width="3" stroke-dasharray="6 7" opacity=".9"/>
+  <g fill="#d9a861">
+    <circle cx="318" cy="418" r="5"/>
+    <circle cx="482" cy="418" r="5"/>
+  </g>
+  <path d="M486 194q22 12 30 34" fill="none" stroke="#434c38" stroke-width="2" opacity=".35"/>
+</svg>

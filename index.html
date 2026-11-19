@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JahitSuka — katalog layanan jahit demo: kebaya, batik, seragam, permak, dan aksesori. Aplikasi latihan, bukan toko produksi."
+    />
+    <title>JahitSuka — Katalog Layanan Jahit</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#konten-utama">Lewati ke konten</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#katalog">JahitSuka</a>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a class="nav-link is-active" id="tab-katalog" href="#katalog" aria-current="page">Katalog</a>
+          <a class="nav-link" id="tab-dashboard" href="#dashboard">Dashboard</a>
+          <a class="nav-link" href="#kontak">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="konten-utama" class="container" tabindex="-1">
+      <p id="peringatan-data" class="notice" role="status" hidden></p>
+
+      <!-- ================= Katalog publik ================= -->
+      <div id="tampilan-katalog">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-inner">
+            <p class="hero-eyebrow">Jasa jahit rumahan · demo</p>
+            <h1 id="hero-title">Temukan Layanan Jahit Pilihan Anda</h1>
+            <p class="hero-text">
+              JahitSuka menyediakan pakaian jadi, seragam, permak, dan aksesori
+              bordir. Pilih layanan, cek harga dan stok, lalu pesan lewat
+              WhatsApp. Semua data di halaman ini bersifat fiktif.
+            </p>
+            <a class="btn btn-primary" href="#katalog">Lihat Katalog</a>
+          </div>
+        </section>
+
+        <section id="katalog" aria-labelledby="judul-katalog">
+          <div class="section-heading">
+            <h2 id="judul-katalog">Katalog Layanan</h2>
+            <p id="jumlah-hasil" class="result-count" aria-live="polite"></p>
+          </div>
+
+          <div id="jelajah" class="controls" role="search">
+            <div class="control control-search">
+              <label for="input-cari">Cari layanan</label>
+              <input
+                id="input-cari"
+                type="search"
+                name="cari"
+                placeholder="Cari layanan jahit..."
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="control">
+              <label for="filter-kategori">Kategori</label>
+              <select id="filter-kategori" name="kategori"></select>
+            </div>
+
+            <div class="control">
+              <label for="urutkan">Urutkan</label>
+              <select id="urutkan" name="urutan">
+                <option value="unggulan">Unggulan dulu</option>
+                <option value="harga-terendah">Harga terendah</option>
+                <option value="harga-tertinggi">Harga tertinggi</option>
+                <option value="nama-az">Nama A–Z</option>
+                <option value="stok-terbanyak">Stok terbanyak</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="daftar-produk" class="product-grid"></div>
+        </section>
+      </div>
+
+      <!-- ================= Dashboard demo ================= -->
+      <section id="tampilan-dashboard" class="dashboard" aria-labelledby="judul-dashboard" hidden>
+        <div class="dashboard-head">
+          <div>
+            <h1 id="judul-dashboard">Dashboard Pengelola</h1>
+            <p class="dashboard-note">
+              Area pengelola · demo · data hanya tersimpan di peramban ini dan
+              langsung tampil di katalog.
+            </p>
+          </div>
+
+          <div class="dashboard-tools" role="group" aria-label="Alat data demo">
+            <button type="button" class="btn btn-secondary" id="tombol-ekspor">
+              Ekspor JSON
+            </button>
+            <button type="button" class="btn btn-secondary" id="tombol-impor">
+              Impor JSON
+            </button>
+            <input
+              type="file"
+              id="input-impor"
+              accept=".json,application/json"
+              hidden
+            />
+            <button type="button" class="btn btn-secondary btn-outline-danger" id="tombol-reset">
+              Muat ulang data contoh
+            </button>
+          </div>
+        </div>
+
+        <div class="ringkasan-grid">
+          <article class="ringkasan-card">
+            <p class="ringkasan-label">Total layanan</p>
+            <p class="ringkasan-nilai" id="ringkasan-total">0</p>
+          </article>
+          <article class="ringkasan-card">
+            <p class="ringkasan-label">Total stok</p>
+            <p class="ringkasan-nilai" id="ringkasan-stok">0</p>
+          </article>
+          <article class="ringkasan-card">
+            <p class="ringkasan-label">Stok habis</p>
+            <p class="ringkasan-nilai" id="ringkasan-habis">0</p>
+          </article>
+          <article class="ringkasan-card">
+            <p class="ringkasan-label">Jumlah kategori</p>
+            <p class="ringkasan-nilai" id="ringkasan-kategori">0</p>
+          </article>
+        </div>
+
+        <div class="dashboard-layout">
+          <section class="panel panel-form" aria-labelledby="judul-form">
+            <h2 id="judul-form">Tambah layanan</h2>
+
+            <form id="form-produk" novalidate>
+              <div class="field">
+                <label for="f-nama">Nama layanan</label>
+                <input id="f-nama" name="nama" type="text" autocomplete="off" aria-describedby="galat-nama" />
+                <p class="field-error" id="galat-nama" data-galat="nama"></p>
+              </div>
+
+              <div class="field">
+                <label for="f-kategori">Kategori</label>
+                <select id="f-kategori" name="kategori" aria-describedby="galat-kategori"></select>
+                <p class="field-error" id="galat-kategori" data-galat="kategori"></p>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="f-harga">Harga (Rupiah)</label>
+                  <input
+                    id="f-harga"
+                    name="harga"
+                    type="number"
+                    inputmode="numeric"
+                    min="0"
+                    step="any"
+                    aria-describedby="galat-harga"
+                  />
+                  <p class="field-error" id="galat-harga" data-galat="harga"></p>
+                </div>
+
+                <div class="field">
+                  <label for="f-stok">Stok</label>
+                  <input
+                    id="f-stok"
+                    name="stok"
+                    type="number"
+                    inputmode="numeric"
+                    min="0"
+                    step="1"
+                    aria-describedby="galat-stok"
+                  />
+                  <p class="field-error" id="galat-stok" data-galat="stok"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-deskripsi">Deskripsi</label>
+                <textarea
+                  id="f-deskripsi"
+                  name="deskripsi"
+                  rows="3"
+                  aria-describedby="galat-deskripsi"
+                ></textarea>
+                <p class="field-error" id="galat-deskripsi" data-galat="deskripsi"></p>
+              </div>
+
+              <div class="field">
+                <label for="f-gambar">URL gambar (opsional)</label>
+                <input
+                  id="f-gambar"
+                  name="imageUrl"
+                  type="text"
+                  inputmode="url"
+                  placeholder="/images/placeholder.svg"
+                  aria-describedby="galat-gambar petunjuk-gambar"
+                />
+                <p class="field-hint" id="petunjuk-gambar">
+                  Boleh path lokal seperti <code>/images/contoh.svg</code> atau URL
+                  <code>https://…</code>. Kosongkan untuk memakai placeholder.
+                </p>
+                <p class="field-error" id="galat-gambar" data-galat="imageUrl"></p>
+              </div>
+
+              <div class="field field-checkbox">
+                <input id="f-unggulan" name="unggulan" type="checkbox" />
+                <label for="f-unggulan">Jadikan unggulan</label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary" id="tombol-simpan">
+                  Simpan layanan
+                </button>
+                <button type="button" class="btn btn-secondary" id="tombol-batal" hidden>
+                  Batal
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel panel-tabel" aria-labelledby="judul-tabel">
+            <h2 id="judul-tabel">Daftar layanan</h2>
+
+            <div class="table-wrap">
+              <table class="tabel-produk">
+                <caption class="visually-hidden">
+                  Daftar layanan jahit yang tersimpan
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Kategori</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Stok</th>
+                    <th scope="col">Unggulan</th>
+                    <th scope="col">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="tabel-produk"></tbody>
+              </table>
+            </div>
+
+            <p id="tabel-kosong" class="empty-state empty-state-inline" hidden>
+              Belum ada layanan tersimpan. Tambahkan lewat form, impor JSON, atau
+              muat ulang data contoh.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kontak" class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">JahitSuka</p>
+        <p>
+          Aplikasi demo untuk latihan. Tidak ada transaksi nyata, dan nomor
+          WhatsApp yang dipakai hanyalah nomor contoh.
+        </p>
+      </div>
+    </footer>
+
+    <dialog id="dialog-konfirmasi" class="dialog" aria-labelledby="dialog-judul" aria-describedby="dialog-pesan">
+      <form method="dialog" class="dialog-inner">
+        <h2 id="dialog-judul">Konfirmasi</h2>
+        <p id="dialog-pesan"></p>
+        <div class="dialog-actions">
+          <button type="submit" class="btn btn-secondary" value="batal" id="dialog-batal">
+            Batal
+          </button>
+          <button type="submit" class="btn btn-danger" value="ya" id="dialog-ya">
+            Lanjutkan
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

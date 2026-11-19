@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efe3cf"/>
+      <stop offset="1" stop-color="#ddc9ab"/>
+    </linearGradient>
+    <pattern id="batik" width="52" height="52" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">
+      <path d="M6 36q10-16 20 0t20 0" fill="none" stroke="#f2e5cd" stroke-width="2.5" opacity=".38"/>
+      <circle cx="14" cy="14" r="2.4" fill="#f2e5cd" opacity=".5"/>
+      <circle cx="40" cy="44" r="2.4" fill="#f2e5cd" opacity=".5"/>
+      <path d="M40 8q5 5 0 10" fill="none" stroke="#d9a861" stroke-width="2" opacity=".5"/>
+    </pattern>
+    <path id="badan" d="M330 160q70-14 140 0l70 26 40 146-48 14-43-96v255q-92 28-184 0V250l-43 96-48-14 40-146Z"/>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M172 600V306a228 228 0 0 1 456 0v294Z" fill="#d3bb99" opacity=".55"/>
+  <path d="M198 600V310a202 202 0 0 1 404 0v290" fill="none" stroke="#bda17c" stroke-width="2" stroke-dasharray="4 10" opacity=".7"/>
+  <ellipse cx="400" cy="554" rx="175" ry="16" fill="#b39670" opacity=".3"/>
+
+  <g fill="none" stroke="#9a7138" stroke-width="4" stroke-linecap="round">
+    <path d="M400 132v-10a18 18 0 1 1 18-18"/>
+    <path d="M312 156h176"/>
+  </g>
+
+  <use href="#badan" fill="#6d4a34"/>
+  <use href="#badan" fill="url(#batik)"/>
+  <path d="M330 160q70-14 140 0l-8 60-62 26-62-26Z" fill="#7b5540"/>
+  <path d="M366 158 400 232l34-74 14 5-44 92h-8l-44-92Z" fill="#f2e5cd"/>
+  <path d="M400 236v264" stroke="#e9d9bf" stroke-width="3"/>
+  <circle cx="400" cy="278" r="4" fill="#e9d9bf"/>
+  <circle cx="400" cy="330" r="4" fill="#e9d9bf"/>
+  <circle cx="400" cy="382" r="4" fill="#e9d9bf"/>
+  <circle cx="400" cy="434" r="4" fill="#e9d9bf"/>
+  <rect x="444" y="266" width="46" height="54" rx="4" fill="#5d3f2c" stroke="#e9d9bf" stroke-width="2" stroke-dasharray="4 5"/>
+  <path d="M308 506q92 26 184 0" fill="none" stroke="#d9a861" stroke-width="3" stroke-dasharray="6 7"/>
+  <path d="M484 200q22 12 30 32" fill="none" stroke="#3d2a1c" stroke-width="2" opacity=".35"/>
+</svg>
